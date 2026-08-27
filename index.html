@@ -810,37 +810,42 @@
           <p style="font-size:.85rem;color:var(--grey)">We'll get back to you within one business day.</p>
         </div>
         <form onsubmit="handleSubmit(event)">
+          <!-- FormSubmit Options -->
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_subject" value="New Clean Energy Enquiry — Aethel Energy">
+          <input type="hidden" name="_template" value="table">
+
           <div class="form-row">
             <div class="form-group">
               <label class="form-label">First Name</label>
-              <input type="text" class="form-input" placeholder="Daniel" required/>
+              <input type="text" name="First Name" class="form-input" placeholder="Sipho" required/>
             </div>
             <div class="form-group">
               <label class="form-label">Last Name</label>
-              <input type="text" class="form-input" placeholder="Dlamini" required/>
+              <input type="text" name="Last Name" class="form-input" placeholder="Dlamini" required/>
             </div>
           </div>
           <div class="form-group">
             <label class="form-label">Business Email</label>
-            <input type="email" class="form-input" placeholder="daniel@yourcompany.co.za" required/>
+            <input type="email" name="Email" class="form-input" placeholder="sipho@yourcompany.co.za" required/>
           </div>
           <div class="form-group">
             <label class="form-label">Company Name</label>
-            <input type="text" class="form-input" placeholder="Your Company (Pty) Ltd"/>
+            <input type="text" name="Company" class="form-input" placeholder="Your Company (Pty) Ltd"/>
           </div>
           <div class="form-group">
             <label class="form-label">I'm Interested In</label>
-            <select class="form-select">
+            <select name="Interest" class="form-select">
               <option value="">Select an option…</option>
-              <option>General information</option>
-              <option>Energy wheeling enquiry</option>
-              <option>Onsite solar PV + BESS</option>
-              <option>Onsite solar PV only</option>         
+              <option value="General Information">General information</option>
+              <option value="Wheeling Origination">Energy wheeling enquiry</option>
+              <option value="Solar PV + BESS">Onsite solar PV + BESS</option>
+              <option value="Solar PV Only">Onsite solar PV only</option>        
             </select>
           </div>
           <div class="form-group">
             <label class="form-label">Message (Optional)</label>
-            <textarea class="form-textarea" placeholder="Tell us about your current energy setup or monthly spend…"></textarea>
+            <textarea name="Message" class="form-textarea" placeholder="Tell us about your current energy setup or monthly spend…"></textarea>
           </div>
           <button type="submit" class="form-submit">Send My Request →</button>
         </form>
@@ -848,7 +853,6 @@
     </div>
   </div>
 </section>
-
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
